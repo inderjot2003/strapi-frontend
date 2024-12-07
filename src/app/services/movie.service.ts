@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MovieService {
-  private apiUrl = 'http://localhost:1337/api'; // Update with your Strapi URL
+  private apiUrl = environment.baseUrl + '/api'; // Update with your Strapi URL
 
   constructor(private http: HttpClient) {}
 
