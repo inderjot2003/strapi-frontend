@@ -1,0 +1,9 @@
+<div class="reviews-container">
+  <h1>{{movieName}} Reviews</h1>
+  <div *ngFor="let review of reviews" class="review-card">
+    <h3>{{ review.title }}</h3>
+    <p class="author">By: {{ review.author }}</p>
+    <p class="description">{{ review.description | slice:0:100 }}...</p>
+    <button routerLink="/review/{{ review.slug }}">Read More</button>
+  </div>
+</div>

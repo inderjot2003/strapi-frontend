@@ -1,0 +1,11 @@
+<div class="detail-container">
+  
+  <div class="review-detail" *ngIf="review">
+    <p class="back" (click)="goBack()">
+      <img src="assets/back.png" alt="Back icon" width="16px">
+      Back</p>
+    <h1>{{ review.title }}</h1>
+    <p class="author">By: {{ review.author }}</p>
+    <p class="full-description">{{ review.description }}</p>
+  </div>
+</div>

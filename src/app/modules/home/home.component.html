@@ -1,0 +1,6 @@
+<div class="movies-container">
+  <div *ngFor="let movie of movies" class="movie-card" (click)="goToMovie(movie.slug)">
+    <img [src]="assetUrl+movie.img?.url" alt="{{ movie.name }}" />
+    <h2>{{ movie.name }}</h2>
+  </div>
+</div>
